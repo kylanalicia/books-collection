@@ -13,6 +13,10 @@ class Author(Base):
     
     books = relationship('Book', back_populates='author')
 
+    def __repr__(self):
+        return f"Author(id={self.id}, name='{self.name}', nationality='{self.nationality}')"
+
+
 class Book(Base):
     __tablename__ = 'books'
 
@@ -25,6 +29,12 @@ class Book(Base):
     author = relationship('Author', back_populates='books')
     copies = relationship('BookCopy', back_populates='book')
 
+    def __repr__(self) -> str:
+        return super().__repr__()
+    
+    def __repr__(self):
+        return f"Book(isbn='{self.isbn}', title='{self.title}', publication_year={self.publication_year}, genre='{self.genre}', author_id={self.author_id})"
+
 class Library(Base):
     __tablename__ = 'libraries'
 
@@ -33,6 +43,9 @@ class Library(Base):
     location = Column(String)
 
     copies = relationship('BookCopy', back_populates='library')
+
+    def __repr__(self):
+        return f"Library(id={self.id}, name='{self.name}', location='{self.location}')"
 
 class BookCopy(Base):
     __tablename__ = 'book_copies'
@@ -45,4 +58,7 @@ class BookCopy(Base):
     book = relationship('Book', back_populates='copies')
     library = relationship('Library', back_populates='copies')
 
-
+    def __repr__(self):
+        return f"BookCopy(copy_id={self.copy_id}, condition='{self.condition}', isbn='{self.isbn}', library_id={self.library_id})"
+    
+    

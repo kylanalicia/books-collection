@@ -13,6 +13,6 @@ metadata = MetaData(naming_convention=convention)
 Base = declarative_base(metadata=metadata)
 
 # Create an SQLAlchemy engine and session connected to an SQLite database
-engine = create_engine('sqlite:///books.db')
+engine = create_engine('sqlite:///database.db')
 Session = sessionmaker(bind=engine)
 session = Session()
