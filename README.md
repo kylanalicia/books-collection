@@ -35,4 +35,12 @@ To list books: python main.py --action list_books
 To list libraries: python main.py --action list_libraries
 To list book copies in a library: python main.py --action list_copies
 
+## Contributing
+Contributions are welcome! If you would like to contribute to this project, please follow these steps:
+
+Fork the repository.
+Create a new branch for your feature or bug fix.
+Make your changes and commit them.
+Push your branch to your fork.
+Create a pull request to the main branch of the original repository.
 
