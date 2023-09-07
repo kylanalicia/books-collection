@@ -44,3 +44,6 @@ Make your changes and commit them.
 Push your branch to your fork.
 Create a pull request to the main branch of the original repository.
 
+## License
+This project is licensed under the MIT License
+
