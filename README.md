@@ -12,3 +12,12 @@ The Library Management System CLI is a Python command-line application for manag
 - Add book copies to the database with information about their condition and associations with books and libraries.
 - List authors, books, libraries, and book copies from the database.
 
+## Requirements
+
+To run this project, you need the following:
+
+- SQLAlchemy (for database management)
+- Alembic (for database migrations)
+- Faker (for generating test data)
+
+
