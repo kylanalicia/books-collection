@@ -20,4 +20,19 @@ To run this project, you need the following:
 - Alembic (for database migrations)
 - Faker (for generating test data)
 
+## installation
+clone the repository
+cd repository
+start the project
+
+## Usage
+To add an author: python main.py --action add_author
+To add a book: python main.py --action add_book
+To add a library: python main.py --action add_library
+To add a book copy: python main.py --action add_copy
+To list authors: python main.py --action list_authors
+To list books: python main.py --action list_books
+To list libraries: python main.py --action list_libraries
+To list book copies in a library: python main.py --action list_copies
+
 
