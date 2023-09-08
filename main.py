@@ -42,7 +42,11 @@ def list_books():
     books = session.query(Book).all()
     for book in books:
         author = session.query(Author).filter_by(id=book.author_id).first()
-        print(f"{book.isbn}: {book.title} ({book.publication_year}), Author: {author.name}")
+        
+        if author:
+            print(f"{book.isbn}: {book.title} ({book.publication_year}), Author: {author.name}")
+        else:
+            print(f"{book.isbn}: {book.title} ({book.publication_year}), Author: Unknown")
 
 def list_libraries():
     libraries = session.query(Library).all()
